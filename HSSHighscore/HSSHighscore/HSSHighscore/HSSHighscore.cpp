@@ -11,15 +11,17 @@ namespace HS {
 	}
 
 	void insertSort(ScoreEntry entry) {
-		for (int i = 0; i < listSize; i++) {
-			if (entry.score > list[i].score) {
+		for (int i = 0; i < 5; i++)
+		{
+			for (int j = 0; j < 5; j++) {
+				if (entry.score > list[j].score)
+				{
+					ScoreEntry temp = entry;
+					entry = list[j];
+					list[j] = temp;
 
-			}
-			else {
-				int x = i - 1;
-				if (x >= 0) {
-					list[x] = entry;
 				}
+
 			}
 		}
 	}
